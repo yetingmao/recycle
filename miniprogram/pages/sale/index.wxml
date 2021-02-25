@@ -1,0 +1,12 @@
+<!-- miniprogram/pages/index/index.wxml -->
+<view class="container_sale">
+    <van-grid direction="horizontal" column-num="2" clickable gutter="{{ 10 }}">
+        <van-grid-item wx:for="{{clothesClass}}" wx:key="index" id="{{index}}" text="{{item.text}}"
+        bind:click="selectClothes" />
+
+    </van-grid>
+</view>
+<van-dialog use-slot title="标题" show="{{ show }}" bind:close="onClose">
+    {{clothes.text }}
+</van-dialog>
+<van-toast id="van-toast" />

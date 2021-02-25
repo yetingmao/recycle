@@ -1,29 +1,9 @@
 <!-- miniprogram/pages/index/index.wxml -->
 <van-notice-bar scrollable="{{ false }}" text="记得右上角添加收藏哟" color="#fff" background="#0bb9b6"></van-notice-bar>
-<view wx:if="{{tabs.length >0}}">
-    <van-tabs bind:change="onChange" active="{{ activeTab }}" swipeable>
-        <van-tab wx:for="{{tabs}}" wx:for-index="idx" wx:key="idx" title="{{item.title}}">
-            <view class="container">
-                <view class="coupon">
-                    <view class="item" wx:for-index="i" wx:for="{{item.coupon}}" wx:for-item="v" wx:key="i">
-                        <view class="top">
-                            <view class="left">
-                                <view class="content">
-                                    <image src="{{v.icon}}" class="icon" mode="widthFix" />
-                                    <view class="name">{{ v.name }}</view>
-                                </view>
-                                <view class="text" wx:if="{{v.type == 1}}">天天可领</view>
-                                <view class="text" wx:elif="{{v.type == 2}}">限时秒杀</view>
-                            </view>
-                            <view class="right" data-index="{{i}}" bindtap="toCoupon">免费领取</view>
-                        </view>
-                        <view class="bottom">
-                            <image src="{{v.bannerPic}}" mode="widthFix" data-index="{{i}}" bindtap="toCoupon" />
-                        </view>
-                    </view>
-                </view>
-            </view>
-        </van-tab>
-    </van-tabs>
+<view class="container_index">
+    <van-grid custom-class="index_grid" clickable column-num="1" gutter="{{ 10 }}">
+        <van-grid-item custom-class="index_grid_item" icon="balance-list-o" link-type="navigateTo" url="/pages/sale/index" text="统收" />
+        <van-grid-item custom-class="index_grid_item" icon="balance-list-o" link-type="reLaunch" url="/pages/sale/index" text="分收" />
+    </van-grid>
 </view>
 <van-toast id="van-toast" />
