@@ -1,6 +1,6 @@
 // miniprogram/pages/index/index.js
 import Toast from '../../components/dist/toast/toast';
-import { subscribe, hasSubscribe} from "../../utils/index"
+//import { subscribe, hasSubscribe} from "../../utils/index"
 const app = getApp()
 Page({
   /**
@@ -52,7 +52,7 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-    this.addUser()
+   // this.addUser()
   },
   addUser() {
     wx.cloud.callFunction({
@@ -70,19 +70,19 @@ Page({
       Toast.fail('请先登录');
       return
     }
-    hasSubscribe(res=>{
-      if(res.result){
-        Toast.success('已经订阅成功了');
-      }else{
-        subscribe(res=>{
-          if (res.result === true) {
-            Toast.success('订阅成功');
-          } else {
-            Toast.fail('订阅失败');
-          }
-      });
-      }
-    })
+    // hasSubscribe(res=>{
+    //   if(res.result){
+    //     Toast.success('已经订阅成功了');
+    //   }else{
+    //     subscribe(res=>{
+    //       if (res.result === true) {
+    //         Toast.success('订阅成功');
+    //       } else {
+    //         Toast.fail('订阅失败');
+    //       }
+    //   });
+    //   }
+    // })
     //申请发送订阅消息
   },
 })

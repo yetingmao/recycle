@@ -10,3 +10,9 @@ page {
 .loading {
     text-align: center;
 }
+.sale_dialog{
+  padding: 40rpx 0rpx;
+}
+.van-dialog__button{
+  width: 50%;
+}

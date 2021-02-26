@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/sale/index",
     "pages/index/index",
-    
+    "pages/sale/index",
+  
     "pages/user/index"
   ],
   "tabBar": {
