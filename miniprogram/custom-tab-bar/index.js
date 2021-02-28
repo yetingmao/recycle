@@ -15,6 +15,12 @@ Component({
 				name:"service"
 			},
 			{
+				icon: 'orders-o',
+				text: '订单',
+				url: '/pages/order/index',
+				name:"order"
+			},
+			{
 				icon: 'manager-o',
 				text: '我的',
 				url: '/pages/user/index',

@@ -4,5 +4,6 @@
     "van-cell-group": "../../components/dist/cell-group/index",
     "van-toast": "../../components/dist/toast",
     "van-button": "../../components/dist/button"
-  }
+  },
+  "enablePullDownRefresh":true
 }

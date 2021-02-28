@@ -2,7 +2,7 @@
     "usingComponents": {
         "van-grid": "../../components/dist/grid",
         "van-grid-item": "../../components/dist/grid-item",
-        "van-loading": "../../components/dist/loading",
+        "van-toast": "../../components/dist/toast",
         "van-dialog": "../../components/dist/dialog",
         "van-cell": "../../components/dist/cell/index",
         "van-field": "../../components/dist/field/index",

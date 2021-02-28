@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "van-card": "../../components/dist/card/index",
+        "van-button": "../../components/dist/button/index",
+        "van-toast": "../../components/dist/toast"
+    },
+    "enablePullDownRefresh":true
+}

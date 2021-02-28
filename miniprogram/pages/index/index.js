@@ -18,43 +18,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        // db.collection('coupons').get().then(res => {
-        //     const tabs = res.data;
-        //     let all = {
-        //         title: '全部',
-        //         icon: '../../images/all.png',
-        //         coupon: []
-        //     }
-        //     tabs.forEach(item => {
-        //         let c = item.coupon
-        //         c.forEach(citem => {
-        //             all.coupon.push(citem)
-        //         })
-        //     })
-        //    // tabs.unshift(all)
-        //     this.setData({
-        //         tabs
-        //     })
-        // })
-        // db.collection('share-message').get().then(res => {
-        //     const messages = res.data
-
-        //     let idx = Math.floor(Math.random() * messages.length)
-
-        //     this.data.msg = messages[idx]
-        // })
-
-        // db.collection('notice').get().then(res => {
-        //     const notice = res.data
-        //     if (notice[0]) this.setData({
-        //         notice: notice[0].notice
-        //     })
-        // })
-        // hasSubscribe(res=>{
-        //     this.setData({
-        //         isSubscribe:res.result
-        //     });
-        // })
+       
     },
 
     onChange(e) {

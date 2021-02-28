@@ -10,8 +10,9 @@
   </view>
   <view class="content">
     <van-cell-group>
-      <van-cell title="订阅红包" icon="smile-comment-o" is-link bind:click="requestSubscribe" />
-      <van-cell title="收藏" icon="records" is-link bind:click="collect" />
+      <van-cell title="角色"   value="{{role==='admin'?'管理员':'用户'}}" />
+      <van-cell title="积分"  value="{{intergal}}" />
+      <van-cell title="福利红包" icon="bill-o" is-link bind:click="requestSubscribe" />
     </van-cell-group>
   </view>
   <van-toast id="van-toast" />

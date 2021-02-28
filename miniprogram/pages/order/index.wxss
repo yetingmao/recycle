@@ -1,0 +1,21 @@
+
+/* 样式 */
+
+.container_order{
+  padding: 0rpx 20rpx;
+}
+.order_item{
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.order_footer{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40rpx;
+}
+.order_footer_btn{
+  width: 100%!important;
+}
+.loading {
+    text-align: center;
+}
