@@ -2,7 +2,7 @@
 <van-notice-bar scrollable="{{ false }}" text="记得右上角添加收藏哟" color="#fff" background="#0bb9b6"></van-notice-bar>
 <view class="container_index">
     <van-grid custom-class="index_grid" clickable column-num="1" gutter="{{ 10 }}">
-        <van-grid-item custom-class="index_grid_item" icon="balance-list-o" link-type="navigateTo" url="/pages/sale/index" text="统收" />
+        <van-grid-item custom-class="index_grid_item" icon="balance-list-o" link-type="navigateTo" url="/pages/sale/index?type=1" text="统收" />
         <van-grid-item custom-class="index_grid_item" icon="balance-list-o" link-type="reLaunch" url="/pages/sale/index" text="分收" />
     </van-grid>
 </view>

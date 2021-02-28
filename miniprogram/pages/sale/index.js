@@ -7,7 +7,6 @@ import Toast from '../../components/dist/toast/toast';
 import {
   clothesClass
 } from "../../config/index"
-const db = wx.cloud.database()
 const app = getApp()
 Page({
   /**
@@ -35,6 +34,15 @@ Page({
           }
       });
       return;
+    }
+    if(options.type==="1"){
+      this.setData({
+        clothesClass:[],
+        show: true,
+        clothes: {
+          text:"统收"
+        }
+      });
     }
   },
   selectClothes(e) {

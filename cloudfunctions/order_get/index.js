@@ -11,9 +11,21 @@ exports.main = async (event, context) => {
     const {
       OPENID
     } = cloud.getWXContext();
-    const result = await db.collection('order').where({
-      userId: OPENID,
-    }).orderBy('date', 'desc').get();
+    const user = await db.collection('user').where({
+      touser: OPENID,
+    }).get();
+    const {
+      role
+    } = user.data[0];
+    let option = {
+      status: "1"
+    };
+    if (role !== "admin") {
+      option = {
+        userId: OPENID,
+      }
+    }
+    const result = await db.collection('order').where(option).orderBy('date', 'desc').orderBy('status', 'asc').get();
     return result.data;
   } catch (err) {
     console.log(err);
