@@ -1,0 +1,5 @@
+<van-notice-bar
+  left-icon="volume-o"
+  text="积分可以兑换家政服务～（服务范围郑州四环内）"
+/>
+<van-empty description="内容还未上线，敬请期待" />

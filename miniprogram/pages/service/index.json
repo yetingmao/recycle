@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-empty": "../../components/dist/empty/index",
+    "van-notice-bar": "../../components/dist/notice-bar/index"
+  }
+}

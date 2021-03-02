@@ -109,9 +109,9 @@ Page({
             // 来自页面内转发按钮
         }
         return {
-            title: this.data.msg.title,
-            path: this.data.msg.path,
-            imageUrl: this.data.msg.imageUrl,
+            title: "看看你家能卖多少钱",
+            path: "/pages/index/index",
+            imageUrl: "",
         }
     }
 })

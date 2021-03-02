@@ -2,7 +2,6 @@
     "usingComponents": {
         "van-grid": "../../components/dist/grid",
         "van-grid-item": "../../components/dist/grid-item",
-        "van-notice-bar": "../../components/dist/notice-bar",
-        "van-loading": "../../components/dist/loading"
+        "van-notice-bar": "../../components/dist/notice-bar"
     }
 }

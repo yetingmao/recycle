@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/sale/index",
     "pages/order/index",
+    "pages/service/index",
     "pages/user/index"
   ],
   "tabBar": {
@@ -16,6 +17,9 @@
 			},
 			{
 				"pagePath": "pages/user/index"
+      },
+      {
+				"pagePath": "pages/service/index"
 			}
 		]
 	},

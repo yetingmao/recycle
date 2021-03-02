@@ -11,7 +11,7 @@ Component({
 			{
 				icon: 'logistics',
 				text: '家政服务',
-				url: '/pages/index/index',
+				url: '/pages/service/index',
 				name:"service"
 			},
 			{

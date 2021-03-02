@@ -1,10 +1,5 @@
 // miniprogram/pages/index/index.js
-import {
-  subscribe,
-  hasSubscribe
-} from "../../utils/index"
 import Toast from '../../components/dist/toast/toast';
-const db = wx.cloud.database()
 const app = getApp()
 Page({
   /**

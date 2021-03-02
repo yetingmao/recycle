@@ -1,7 +1,8 @@
 <!-- miniprogram/pages/index/index.wxml -->
 <view class="container_order">
-    <van-card custom-class="order_item" wx:for="{{order}}" wx:key="index" tag="{{item.tag}}" num="{{item.num}}"
-        price="{{item.price}}" desc="{{item.desc}}" title="{{item.title}}">
+    <van-empty description="暂无订单" wx:if="{{order.length===0}}" />
+    <van-card  custom-class="order_item" wx:for="{{order}}" wx:key="index" tag="{{item.tag}}"
+        num="{{item.num}}" price="{{item.price}}" desc="{{item.desc}}" title="{{item.title}}">
         <view wx:if="{{role==='admin' && item.tag==='审核中'}}" slot="footer" class="order_footer">
             <van-button data-userId="{{item.userId}}" data-status="2" data-id="{{item.id}}" bind:click="check"
                 custom-class="order_footer_btn" type="danger">不通过</van-button>
