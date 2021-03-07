@@ -5,5 +5,6 @@
     "van-toast": "../../components/dist/toast",
     "van-button": "../../components/dist/button"
   },
-  "enablePullDownRefresh":true
+  "enablePullDownRefresh":true,
+  "navigationBarTitleText": "个人中心"
 }

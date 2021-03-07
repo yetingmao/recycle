@@ -54,8 +54,10 @@ const clothesClass = [
     text: "其他",
     unit:"元/斤",
   }
-]
+];
+import Area from "./area"
 module.exports = {
   lessonTmplId,
-  clothesClass
+  clothesClass,
+  Area
 }

@@ -1,0 +1,19 @@
+<view class="container_register">
+  <view class="register_content">
+    <van-cell-group>
+      <van-field value="{{ username }}" bind:change="changeusername" required clearable label="昵称"
+        placeholder="请输入昵称" />
+      <van-field value="{{ tel }}" type="number" bind:change="changetel" label="电话" placeholder="请输入手机号" required />
+      <van-field value="{{ address }}" bind:focus="show" label="地址" placeholder="请输入地址" required />
+      <van-field value="{{ adressdetail }}" bind:change="changeadressdetail" label="详细地址" placeholder="请输入地址" required />
+    </van-cell-group>
+    <van-area wx:if="{{show}}" bind:cancel="show" bind:confirm="selectaderss" area-list="{{ areaList }}" />
+  </view>
+  <van-button bind:click="addUser" custom-class="register_btn" block type="primary">提交</van-button>
+  <van-overlay show="{{ loading }}">
+    <view class="content_wrapper">
+      <van-loading type="spinner" custom-class="content_loading">提交中...</van-loading>
+    </view>
+  </van-overlay>
+  <van-toast id="van-toast" />
+</view>

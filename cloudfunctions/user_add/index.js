@@ -9,14 +9,10 @@ exports.main = async (event, context) => {
     const {
       OPENID
     } = cloud.getWXContext();
-    const result = await db.collection('user').where({
-      touser: OPENID,
-    }).get();
-    const data=result.data[0];
-    if(data){
-      return data
-    }
     const userInfo=event.userInfo;
+    const { address,adressdetail}=userInfo;
+    delete userInfo.address
+    delete userInfo.adressdetail
     // 在云开发数据库中存储订阅任务
     await db.collection('user').add({
       data: {
@@ -27,10 +23,15 @@ exports.main = async (event, context) => {
         role:"user",
       },
     });
-    return {
-      intergal:0,
-      role:"user",
-    }
+    await db.collection('address').add({
+      data: {
+        touser: OPENID, // 订阅者的openid
+        address:[
+          address+'&'+adressdetail
+        ]
+      },
+    });
+    return {...userInfo,address,adressdetail}
   } catch (err) {
     console.log(err);
     return false;

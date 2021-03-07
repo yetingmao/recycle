@@ -1,28 +1,29 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/sale/index",
+    "pages/register/index",
+    "pages/index/index",
     "pages/order/index",
     "pages/service/index",
     "pages/user/index"
   ],
   "tabBar": {
-		"custom": true,
-		"list": [
-			{
-				"pagePath": "pages/index/index"
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index"
       },
       {
-				"pagePath": "pages/order/index"
-			},
-			{
-				"pagePath": "pages/user/index"
+        "pagePath": "pages/order/index"
       },
       {
-				"pagePath": "pages/service/index"
-			}
-		]
-	},
+        "pagePath": "pages/user/index"
+      },
+      {
+        "pagePath": "pages/service/index"
+      }
+    ]
+  },
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "旧衣服回收",
@@ -30,7 +31,6 @@
     "backgroundColor": "#FFFFFF",
     "titleView": false
   },
-
   "sitemapLocation": "sitemap.json",
   "style": "v2"
 }

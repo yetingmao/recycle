@@ -1,0 +1,18 @@
+container_register{
+  height: 100%;
+  width: 100%;
+}
+.register_btn{
+  margin-top: 60rpx;
+}
+.content_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.content_loading {
+  width: 120px;
+  height: 120px;
+}
