@@ -5,13 +5,13 @@
       bindgetuserinfo="getUserInfo"> 登录 </van-button>
     <view wx:else class="info">
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="info_name">{{userInfo.nickName}}</text>
+      <text class="info_name">{{userInfo.username}}</text>
     </view>
   </view>
   <view class="content">
     <van-cell-group>
-      <van-cell title="角色"   value="{{role==='admin'?'管理员':'用户'}}" />
-      <van-cell title="积分"  value="{{intergal}}" label="积分可兑换家政服务" />
+      <van-cell title="角色"   value="{{userInfo.role}}" />
+      <van-cell title="积分"  value="{{userInfo.intergal}}" label="积分可兑换家政服务" />
       <van-cell title="福利红包" icon="bill-o" is-link bind:click="requestSubscribe" />
     </van-cell-group>
   </view>

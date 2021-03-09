@@ -56,9 +56,16 @@ Page({
           result
         } = res;
         if(result){
-          app.globalData.userInfo = result;
+          const { role}=result;
+          let _role="普通用户"
+          if(role==="2"){
+            _role="区域管理员"
+          }else if(role==="3"){
+            _role="管理员"
+          }
+          app.globalData.userInfo = {...result,role:_role};
           this.setData({
-            userInfo: result,
+            userInfo: app.globalData.userInfo,
             hasUserInfo: true
           })
         }else{
