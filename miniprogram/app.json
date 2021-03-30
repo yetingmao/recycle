@@ -1,8 +1,13 @@
 {
   "pages": [
-    "pages/sale/index",
-    "pages/register/index",
     "pages/index/index",
+
+    "pages/sale/index",
+
+    "pages/types/index",
+
+
+
     "pages/order/index",
     "pages/service/index",
     "pages/user/index"

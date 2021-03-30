@@ -1,0 +1,8 @@
+<!-- miniprogram/pages/index/index.wxml -->
+<view class="container_sale">
+    <van-grid direction="horizontal" column-num="2" clickable gutter="{{ 10 }}">
+        <van-grid-item wx:for="{{clothesClass}}" wx:key="index" id="{{index}}" text="{{item.text}}"
+            link-type="navigateTo"
+            url="{{'/pages/sale/index?type='+item.text}}" />
+    </van-grid>
+</view>

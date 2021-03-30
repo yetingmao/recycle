@@ -1,0 +1,18 @@
+
+/* 样式 */
+page {
+  background-color: #f8f8f8;
+}
+.container_sale{
+  padding: 40rpx 10rpx;
+}
+
+.loading {
+    text-align: center;
+}
+.sale_dialog{
+  padding: 40rpx 0rpx;
+}
+.van-dialog__button{
+  width: 50%;
+}

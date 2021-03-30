@@ -1,36 +1,17 @@
-<!-- miniprogram/pages/index/index.wxml -->
-<view class="container_sale">
-    <van-grid direction="horizontal" column-num="2" clickable gutter="{{ 10 }}">
-        <van-grid-item wx:for="{{clothesClass}}" wx:key="index" id="{{index}}" text="{{item.text}}"
-            bind:click="selectClothes" />
-    </van-grid>
-    <van-submit-bar wx:if="{{value}}" price="{{ value * 100 }}" button-text="提交订单" bind:submit="onSubmit" />
-
-</view>
-<van-toast id="van-toast" />
-<van-dialog use-slot title="下单" show="{{ show }}" show-cancel-button bind:close="onClose">
-    <!-- <view class="sale_dialog">
-        <van-cell title="{{clothes.text}}" value="{{clothes.sale?'平时价--'+clothes.sale+clothes.unit:'良心价'}}" />
-        <van-cell-group>
-            <van-field wx:if="{{clothes.text === '其他'}}" value="{{thing}}" label="物品" placeholder="输入名称"
-                border="{{ false }}" bind:change="changeOther" />
-            <van-field label="数量" value="{{number}}" placeholder="输入斤数" border="{{ false }}"
-                bind:change="changeNumber" />
-            <van-field label="单价" value="{{sale}}" placeholder="{{clothes.unit}}" border="{{ false }}"
-                bind:change="changeSale" />
-            <van-field label="价格" value="{{value}}" disabled border="{{ false }}" />
-        </van-cell-group>
-    </view> -->
-    <view class="sale_dialog">
-        <van-cell title="{{clothes.text}}" value="{{clothes.sale?'指导价--'+clothes.sale+clothes.unit:'良心价'}}" />
-        <van-cell-group>
-            <van-field wx:if="{{clothes.text === '其他'}}" value="{{thing}}" label="物品" placeholder="输入名称"
-                border="{{ false }}" bind:change="changeOther" />
-            <van-field label="数量" value="{{number}}" placeholder="输入斤数" border="{{ false }}"
-                bind:change="changeNumber" />
-            <van-field label="单价" value="{{sale}}" placeholder="{{clothes.unit}}" border="{{ false }}"
-                bind:change="changeSale" />
-            <van-field label="价格" value="{{value}}" disabled border="{{ false }}" />
-        </van-cell-group>
+<view class="container_register">
+  <view class="register_content">
+    <van-cell-group>
+      <van-field value="{{ number }}" bind:change="changenumber" required clearable label="数量（斤）"
+        placeholder="请输入数量" />
+      <van-field value="{{ time }}" bind:focus="show" label="上门时间" placeholder="请输入时间" required />
+    </van-cell-group>
+    <van-datetime-picker wx:if="{{showTime}}" type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:confirm="selecttime"  bind:cancel="show"/>
+  </view>
+  <van-button bind:click="playOrder" custom-class="register_btn" block type="primary">提交</van-button>
+  <van-overlay show="{{ loading }}">
+    <view class="content_wrapper">
+      <van-loading type="spinner" custom-class="content_loading">提交中...</van-loading>
     </view>
-</van-dialog>
+  </van-overlay>
+  <van-toast id="van-toast" />
+</view>

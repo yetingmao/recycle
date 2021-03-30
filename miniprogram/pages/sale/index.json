@@ -1,12 +1,14 @@
 {
     "usingComponents": {
-        "van-grid": "../../components/dist/grid",
-        "van-grid-item": "../../components/dist/grid-item",
-        "van-toast": "../../components/dist/toast",
-        "van-dialog": "../../components/dist/dialog",
-        "van-cell": "../../components/dist/cell/index",
-        "van-field": "../../components/dist/field/index",
-        "van-cell-group": "../../components/dist/cell-group/index",
-        "van-submit-bar": "../../components/dist/submit-bar/index"
-    }
-}
+      "van-cell": "../../components/dist/cell",
+      "van-cell-group": "../../components/dist/cell-group",
+      "van-toast": "../../components/dist/toast",
+      "van-field": "../../components/dist/field",
+      "van-area": "../../components/dist/area/index",
+      "van-loading": "../../components/dist/loading/index",
+      "van-overlay": "../../components/dist/overlay/index",
+      "van-button": "../../components/dist/button",
+      "van-datetime-picker": "../../components/dist/datetime-picker/index"
+    },
+    "navigationBarTitleText": "下单"
+  }

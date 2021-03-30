@@ -50,10 +50,10 @@ const clothesClass = [
     unit:"元/斤",
     sale:"0.4"
   },
-  {
-    text: "其他",
-    unit:"元/斤",
-  }
+  // {
+  //   text: "其他",
+  //   unit:"元/斤",
+  // }
 ];
 import Area from "./area"
 module.exports = {
